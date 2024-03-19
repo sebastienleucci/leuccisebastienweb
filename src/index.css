@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: "Figtree";
+    font-weight: 800;
+    src: url("./assets/fonts/Figtree-ExtraBold-800.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Figtree";
+    font-weight: 700;
+    src: url("./assets/fonts/Figtree-Bold-700.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Figtree";
+    font-weight: 600;
+    src: url("./assets/fonts/Figtree-SemiBold-600.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Figtree";
+    font-weight: 500;
+    src: url("./assets/fonts/Figtree-Medium-500.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Figtree";
+    font-weight: 400;
+    src: url("./assets/fonts/Figtree-Regular-400.woff2") format("woff2");
+}
+
+/* Default settings */
+#root {
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+*{
+    font-family: "Figtree";
+}
+
+/* Section */
+.mySection {
+	max-width: 1024px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
