@@ -1,3 +1,4 @@
+import { ProjectBaseOld } from "./ProjectBaseOld"
 import { ProjectBase } from "./ProjectBase"
 import { useLoader } from "@react-three/fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
@@ -24,13 +25,13 @@ export function ProjectList() {
 	gltfLun02.scene.children[0].material = glassMaterial2
 
 	return (
-		<>
+		<section className='-mt-16'>
 			<ProjectBase
-				baseState={true}
+				baseState={false}
 				title={"Collection de lunettes - Ghyara"}
 				pills={["Design de produit", "Modélisation 3D"]}
-				color1={"#f97316"}
-				color2={"#ebb08b"}
+				color1={"#bf854b"}
+				color2={"#9f481f"}
 				urls={[
 					"/lunettes/M5.1.webp",
 					"/lunettes/M5.2.webp",
@@ -45,7 +46,7 @@ export function ProjectList() {
 				]}
 			>
 				<div>
-					<p className='text-left'>
+					<p className='text-left mb-3'>
 						Création et la conception d’une collection de 5 modèles de lunettes de soleil. Imaginer,
 						dessiner, modéliser et créer les plans techniques pour l'envoi aux industriels.
 						<br />
@@ -54,7 +55,7 @@ export function ProjectList() {
 						<a
 							href='https://www.instagram.com/ghyara.co/'
 							target='_blank'
-							className='text-orange-500 font-bold underline pl-1'
+							className='text-[#bf854b] font-bold underline pl-1'
 						>
 							Ghyara Instagram
 						</a>
@@ -63,7 +64,7 @@ export function ProjectList() {
 						<a
 							href='https://ghyara.co/'
 							target='_blank'
-							className='text-orange-500 font-bold underline pl-1'
+							className='text-[#bf854b] font-bold underline pl-1'
 						>
 							Ghyara.co
 						</a>
@@ -73,6 +74,30 @@ export function ProjectList() {
 				<primitive object={gltfLun01.scene} scale={23} rotation={[0.45, 0, 0]} position={[0, 0.3, 0]} />
 			</ProjectBase>
 			<ProjectBase
+				baseState={false}
+				title={"Yacht Wally Esense"}
+				pills={["Modélisation 3D"]}
+				color1={"#1360a7"}
+				color2={"#1360a7"}
+				urls={[
+					"/wally/wally_01.webp",
+					"/wally/wally_02.webp",
+					"/wally/wally_03.webp",
+					"/wally/wally_04.webp",
+					"/wally/wally_05.webp",
+					"/wally/wally_06.webp",
+					"/wally/wally_07.webp",
+					"/wally/wally_08.webp",
+				]}
+				urlPreview={'url("/wally/wally_icon.webp")'}
+			>
+				<p className='text-left mb-3'>
+					Création et la conception d’une collection de 5 modèles de lunettes de soleil. Imaginer, dessiner,
+					modéliser et créer les plans techniques pour l'envoi aux industriels.
+				</p>
+				<mesh />
+			</ProjectBase>
+			<ProjectBaseOld
 				baseState={false}
 				title={"Premiers prototypes - Ghyara"}
 				pills={["Design de produit", "Modélisation 3D"]}
@@ -97,10 +122,26 @@ export function ProjectList() {
 					autres projets.
 				</p>
 				<primitive object={gltfLun02.scene} scale={23} rotation={[0.45, 0, 0]} position={[0, 0.3, 0]} />
-			</ProjectBase>
-			<ProjectBase
-				baseState={true}
+			</ProjectBaseOld>
+			<ProjectBaseOld
+				baseState={false}
 				title={"Wally Esence 143"}
+				pills={["Modélisation 3D", "Animation 3D"]}
+				color1={"#1515aa"}
+				color2={"#8888ff"}
+				urls={["/Hexa_Rose_02.png", "/Hexa_Rose_02.png", "/Hexa_Rose_02.png", "/Hexa_Rose_02.png"]}
+				urlPreview={'url("/lunettes/M5.1.webp")'}
+			>
+				<p>
+					Missionné pour la création et la conception d’une collection de 5 modèles de lunettes de soleil. Ces
+					modèles sont les premiers prototypes visuels qui méritent à mon avis d'avoir une place parmis ces
+					autres projets.
+				</p>
+				<mesh />
+			</ProjectBaseOld>
+			<ProjectBaseOld
+				baseState={false}
+				title={"Bonjour"}
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#1515aa"}
 				color2={"#8888ff"}
@@ -112,7 +153,7 @@ export function ProjectList() {
 					autres projets.
 				</p>
 				<mesh />
-			</ProjectBase>
-		</>
+			</ProjectBaseOld>
+		</section>
 	)
 }

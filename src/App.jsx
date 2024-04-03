@@ -2,7 +2,9 @@ import { Header } from "./components/Header.jsx"
 import { Canvas } from "@react-three/fiber"
 import { View } from "@react-three/drei"
 import { Suspense, useRef } from "react"
-import { ProjectList } from "./components/ProjectList.jsx"
+import { Routes, Route } from "react-router-dom"
+import { Home } from "./pages/Home.jsx"
+import { About } from "./pages/About.jsx"
 
 function App() {
 	const canvasContainer = useRef()
@@ -12,7 +14,10 @@ function App() {
 			<Header />
 
 			<main ref={canvasContainer} className='mt-[68px] flex flex-col items-center'>
-				<ProjectList />
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
+				</Routes>
 			</main>
 
 			<Canvas

@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
 export function Header() {
@@ -8,12 +9,12 @@ export function Header() {
 	const [open, toggle] = useToggle(true)
 
 	return (
-		<header className='fixed z-[999] w-full bg-white shadow-md'>
+		<header className='fixed z-[999] w-full bg-white shadow-md xl:px-10 '>
 			<nav className='relative z-50 w-full bg-white m-auto flex max-w-1100 px-5'>
-				<a href='/' className='group pt-4 text-md leading-[35px] font-bold'>
+				<Link to='/' className='group pt-4 text-md leading-[35px] font-bold'>
 					LEUCCI SEBASTIEN
-					<div className='bg-red-500 rounded-t-md group-hover:scale-x-100 h-1 mt-[13px] transition-transform scale-x-0' />
-				</a>
+					<div className='bg-[#c4433d] rounded-t-md group-hover:scale-x-100 h-1 mt-[13px] transition-transform scale-x-0' />
+				</Link>
 
 				{/* Mobile */}
 				<button onClick={toggle} className='md:hidden my-auto ml-auto'>
@@ -21,15 +22,15 @@ export function Header() {
 				</button>
 
 				{/* Desktop */}
-				<nav className='lg:gap-14 w-fit md:flex hidden gap-8 ml-auto mr-5 align-middle'>
-					<a href='/' className='group pt-4 text-base font-medium leading-[35px]'>
+				<nav className='lg:gap-14 w-fit md:flex hidden gap-8 ml-auto align-middle'>
+					<Link to='/about' className='group pt-4 text-base font-medium leading-[35px]'>
 						À propos
-						<div className='bg-red-500 rounded-t-md group-hover:scale-x-100 h-1 mt-[13px] transition-transform scale-x-0' />
-					</a>
-					<a href='/' className='group pt-4 text-base font-medium leading-[35px]'>
+						<div className='bg-[#c4433d] rounded-t-md group-hover:scale-x-100 h-1 mt-[13px] transition-transform scale-x-0' />
+					</Link>
+					<Link to='/about' className='group pt-4 text-base font-medium leading-[35px]'>
 						Me contacter
-						<div className='bg-red-500 rounded-t-md group-hover:scale-x-100 h-1 mt-[13px] transition-transform scale-x-0' />
-					</a>
+						<div className='bg-[#c4433d] rounded-t-md group-hover:scale-x-100 h-1 mt-[13px] transition-transform scale-x-0' />
+					</Link>
 				</nav>
 			</nav>
 
@@ -40,15 +41,15 @@ export function Header() {
 				className='absolute md:hidden z-40 bg-white w-full -mt-[20rem] flex flex-col  
         [&>*]:border-b [&>*]:border-slate-300 [&>*]:px-6 [&>*]:py-4 [&>*]:font-medium shadow-md '
 			>
-				<a href='/' onClick={toggle} className='mt-2 border-t'>
+				<Link to='/' onClick={toggle} className='mt-2 border-t'>
 					Accueil
-				</a>
-				<a href='/' onClick={toggle} to='/Academie'>
+				</Link>
+				<Link to='/about' onClick={toggle}>
 					À propos
-				</a>
-				<a href='/' onClick={toggle} to='/Formation'>
+				</Link>
+				<Link to='/about' onClick={toggle}>
 					Me contacter
-				</a>
+				</Link>
 			</motion.nav>
 		</header>
 	)
