@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom"
 import { Home } from "./pages/Home.jsx"
 import { About } from "./pages/About.jsx"
 import { Footer } from "./components/Footer.jsx"
+import ScrollToTop from "./components/ScrollToTop.js"
 
 function App() {
 	const canvasContainer = useRef()
@@ -31,6 +32,8 @@ function App() {
 			</Canvas>
 
 			<Footer />
+			
+			<ScrollToTop />
 		</>
 	)
 }
