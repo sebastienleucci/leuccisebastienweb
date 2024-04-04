@@ -29,7 +29,7 @@ export function About() {
 			{/* Description */}
 			<section className='flex flex-col sm:flex-row items-center gap-8 mt-14 lg:mt-20 w-full'>
 				<div className='min-w-52 rounded-2xl overflow-hidden'>
-					<img src='/about_01.webp' className='object-cover' />
+					<img src='/about_01.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 				<div className='text-left mt-3 lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Description succincte</h1>
@@ -54,7 +54,7 @@ export function About() {
 					</p>
 				</div>
 				<div className='w-52 rounded-2xl overflow-hidden'>
-					<img src='/about_03.webp' className='object-cover' />
+					<img src='/about_03.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 			</section>
 			{/* Photo */}
@@ -96,20 +96,20 @@ export function About() {
 					</div>
 				</div>
 				<div className='w-52 rounded-2xl mt-3 sm:mt-0 overflow-hidden'>
-				<img src='/about_03.webp' className='object-cover' />
-
+					<img src='/about_04.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 			</section>
 			{/* Phrase accroche */}
 			<section className='flex flex-col-reverse sm:flex-row items-center gap-8 mt-12 lg:mt-16 w-full'>
 				<div className='max-w-52 rounded-2xl overflow-hidden mt-3 sm:mt-0'>
-					<img src='/about_02.webp' className='object-cover' />
+					<img src='/about_02.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 				<div className='text-left lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Phrase d'accroche</h1>
 					<p className='sm:text-lg sm:leading-6'>
 						Créer des projets cohérents et avoir <b>le soucis du détail</b> sont des notions
-						particulièrement importantes que j'applique à mes travaux et bientôt aux vôtres.
+						particulièrement importantes et si vous avez lu jusqu'ici bien joué, franchement j'aurais pas
+						lu.
 					</p>
 				</div>
 			</section>
@@ -126,9 +126,9 @@ export function About() {
 						profils individuels peuvent répondre à vos besoins.
 					</p>
 
-					<div className='flex flex-wrap gap-4 mt-8 m-auto'>
+					<div className='flex flex-wrap gap-4 mt-10 m-auto'>
 						<a
-							className='m-auto mt-0'
+							className='m-auto mt-0 hover:-translate-y-4 transition duration-500'
 							href='https://www.linkedin.com/in/jimmy-golaz-76346579/'
 							target='_blank'
 						>
@@ -139,7 +139,11 @@ export function About() {
 								• Réalisateur <br />• Cadreur sous-marin
 							</p>
 						</a>
-						<a className='m-auto mt-0' href='https://www.instagram.com/julie.gamba/' target='_blank'>
+						<a
+							className='m-auto mt-0 hover:-translate-y-4 transition duration-500'
+							href='https://www.instagram.com/julie.gamba/'
+							target='_blank'
+						>
 							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_jul.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Julie Gamba</b> <br />
@@ -147,7 +151,11 @@ export function About() {
 								• Motion Designer <br />• Graphiste
 							</p>
 						</a>
-						<a className='m-auto mt-0' href='https://www.costanzamariabarbiniai.com/' target='_blank'>
+						<a
+							className='m-auto mt-0 hover:-translate-y-4 transition duration-500'
+							href='https://www.costanzamariabarbiniai.com/'
+							target='_blank'
+						>
 							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_cost.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Costanza Barbini</b> <br />
@@ -155,7 +163,11 @@ export function About() {
 								• Designer d'espace <br />
 							</p>
 						</a>
-						<a className='m-auto mt-0' href='https://www.linkedin.com/in/laura-meunier/' target='_blank'>
+						<a
+							className='m-auto mt-0 hover:-translate-y-4 transition duration-500'
+							href='https://www.linkedin.com/in/laura-meunier/'
+							target='_blank'
+						>
 							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_lau.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Laura Meunier</b> <br />
@@ -167,7 +179,7 @@ export function About() {
 				</div>
 			</section>
 			{/* Contact */}
-			<section className='flex flex-col-reverse sm:flex-row items-center gap-8 mt-20 lg:mt-32 mb-28'>
+			<section className='flex flex-col-reverse sm:flex-row items-center gap-8 mt-20 lg:mt-32 mb-8'>
 				<div className='text-left lg:-mt-5 flex-1 w-full'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Comment me contacter ?</h1>
 					<div className='flex flex-wrap align-middle justify-left gap-3 mt-8'>

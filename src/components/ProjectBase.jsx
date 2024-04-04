@@ -1,11 +1,11 @@
 import { OrbitControls, View } from "@react-three/drei"
 import { PerspectiveCamera } from "@react-three/drei"
-import { useState, useRef, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import { useFrame } from "@react-three/fiber"
 import { motion } from "framer-motion"
 import Slider from "react-slick"
 
 export function ProjectBase({ baseState, title, pills, color1, color2, urls, urlPreview, children }) {
-	//Handle Click resizing
 	const [open, toggle] = useToggle(false)
 	OpenCloseResizing({ open, toggle })
 
@@ -126,6 +126,8 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 		</section>
 	)
 }
+
+
 
 function OpenCloseResizing({ open, toggle }) {
 	const [isMobile, setIsMobile] = useState(false)

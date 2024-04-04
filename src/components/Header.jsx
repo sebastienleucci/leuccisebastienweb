@@ -1,10 +1,8 @@
-import { useRef, useState, useEffect } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
 export function Header() {
-	const logoRef = useRef(null)
-
 	// header mobile
 	const [open, toggle] = useToggle(true)
 
@@ -18,7 +16,7 @@ export function Header() {
 
 				{/* Mobile */}
 				<button onClick={toggle} className='md:hidden my-auto ml-auto'>
-					<img src='/menu.svg' className='w-10' />
+					<img src='/menu-2.svg' className='w-10' />
 				</button>
 
 				{/* Desktop */}

@@ -5,6 +5,7 @@ import { Suspense, useRef } from "react"
 import { Routes, Route } from "react-router-dom"
 import { Home } from "./pages/Home.jsx"
 import { About } from "./pages/About.jsx"
+import { Footer } from "./components/Footer.jsx"
 
 function App() {
 	const canvasContainer = useRef()
@@ -22,13 +23,14 @@ function App() {
 
 			<Canvas
 				eventSource={canvasContainer}
-				// onScroll={true}
 				className='!fixed top-[68px] h-[128rem] overflow-y-scroll hidden sm:block'
 			>
 				<Suspense fallback={null}>
 					<View.Port />
 				</Suspense>
 			</Canvas>
+
+			<Footer />
 		</>
 	)
 }
