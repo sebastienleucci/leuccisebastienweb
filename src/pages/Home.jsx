@@ -17,12 +17,12 @@ export function Home() {
 						>
 							Me contacter{" "}
 							<img
-								src='/src/assets/icons/arrow-right.svg'
+								src='/icons/arrow-right.svg'
 								className='inline w-5 ml-6 sm:ml-10 -mt-[1px] -mr-1'
 							/>
 						</Link>
 						<div>
-							<img src='/src/assets/img/Acc_01.webp' className='mr-10 mt-8 mb:mt-0 ' />
+							<img src='/img/Acc_01.webp' className='mr-10 mt-8 mb:mt-0 ' />
 						</div>
 					</div>
 				</div>
