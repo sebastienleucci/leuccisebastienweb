@@ -1,6 +1,34 @@
 import { ProjectBase } from "./ProjectBase"
+import { useLoader } from "@react-three/fiber"
+import { useEffect, useState } from "react"
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+import { useGLTF } from "@react-three/drei"
+import * as THREE from "three"
+
+useGLTF.preload("/Model_Lun_01_not_baked.glb")
+// useGLTF.preload("/Model_Lun_02_not_baked.glb")
 
 export function ProjectList() {
+	const glassMaterial = new THREE.MeshPhysicalMaterial({
+		color: 0xcc8564,
+		metalness: 0.2,
+		roughness: 0.1,
+		transmission: 0.8,
+	})
+	const gltfLun01 = useGLTF("/Model_Lun_01_not_baked.glb")
+	gltfLun01.scene.children[1].material = glassMaterial
+
+	//Proto Ghyara
+	// const glassMaterial2 = new THREE.MeshPhysicalMaterial({
+	// 	color: 0xa42c37,
+	// 	metalness: 0.2,
+	// 	roughness: 0.1,
+	// 	transmission: 0.8,
+	// })
+	// const gltfLun02 = useGLTF('/Model_Lun_02_not_baked.glb')
+	// gltfLun02.scene.children[0].material = glassMaterial2
+	// <primitive object={gltfLun02.scene} scale={23} rotation={[0.45, 0, 0]} position={[0, 0.3, 0]} />
+
 	return (
 		<section className='w-full -mt-16'>
 			{/* Lunettes Ghyara */}
@@ -22,7 +50,6 @@ export function ProjectList() {
 					"/lunettes/04.2.webp",
 					"/lunettes/04.1.webp",
 				]}
-				urlPreview={'url("/lunettes/icon_lunettes.webp")'}
 			>
 				<div>
 					<p className='text-left mb-3'>
@@ -50,12 +77,15 @@ export function ProjectList() {
 						<br />
 					</p>
 				</div>
+				{gltfLun01 && (
+					<primitive object={gltfLun01.scene} scale={23} rotation={[0.45, 0, 0]} position={[0, 0.3, 0]} />
+				)}
 			</ProjectBase>
 			{/* MYC */}
 			<ProjectBase
 				baseState={false}
 				title={"Monaco Yacht Club - 70 ans"}
-				pills={["Modélisation 3D", "Animation 3D"]}
+				pills={["Animation 3D", "Montage"]}
 				color1={"#be2822"}
 				color2={"#be2822"}
 				urls={[
@@ -71,6 +101,7 @@ export function ProjectList() {
 					À l'occasion des 70 ans du Yacht Club de Monaco, animation d'un livre 3D pour rappels des évènement
 					marquants du club. <b>Rendu final: 18000 images / 48fps / Full HD</b>
 				</p>
+				<mesh />
 			</ProjectBase>
 			{/* Nepal */}
 			<ProjectBase
@@ -89,20 +120,11 @@ export function ProjectList() {
 				]}
 				urlPreview={'url("/nepal/icon_nepal.webp")'}
 			>
-				<div className='mb-3'>
-					<p className='text-left'>
-						Réalisé et co-réalisé par Kevin Sempé et Jimmy Golaz, missionné pour la création de cartes
-						animées en 3D réalistes et schématiques. (4K ProRes / 25fps) <br />
-						Teaser:
-						<a
-							href='https://www.youtube.com/watch?v=Vz1kKn5-gJs'
-							target='_blank'
-							className='text-[#089384] font-bold underline pl-1'
-						>
-							Le Dernier Dauphin de la Rivière Sacrée
-						</a>
-					</p>
-				</div>
+				<p className='text-left mb-3'>
+					Réalisé et co-réalisé par Kevin Sempé et Jimmy Golaz, missionné pour la création de cartes animées
+					en 3D réalistes et schématiques. (4K ProRes / 25fps)
+				</p>
+				<mesh />
 			</ProjectBase>
 			{/* Riva */}
 			<ProjectBase
@@ -127,32 +149,18 @@ export function ProjectList() {
 				urlPreview={'url("/riva/icon_riva.webp")'}
 			>
 				<p className='text-left mb-3'>
-					Missionné pour la modélisation du yacht RIVA par Monaco Piscine et y appliquer des modifications
-					techniques et structurelles. (modifications non publiques)
+					Missionné pour la modélisation du yacht RIVA par Monaco Piscine et y appliquer des
+					modifications techniques et structurelles. (modifications non publiques)
 				</p>
-			</ProjectBase>
-			{/* Homnes */}
-			<ProjectBase
-				baseState={false}
-				title={"Maison-Atelier Homnès"}
-				pills={["Modélisation 3D", "Animation 3D"]}
-				color1={"#989986"}
-				color2={"#989986"}
-				urls={["/homnes/H01.webp", "/homnes/H03.webp", "/homnes/H02.webp", "/homnes/H04.webp"]}
-				urlPreview={'url("/homnes/icon_homnes.webp")'}
-			>
-				<p className='text-left mb-3'>
-					Mise en scène du packaging et des shampoings naturels. Animation 3D et Loop des shampoings pour le
-					kit coffret découverte.
-				</p>
+				<mesh />
 			</ProjectBase>
 			{/* Rocks */}
 			<ProjectBase
 				baseState={false}
 				title={"Piscine Rocks"}
 				pills={["Modélisation 3D"]}
-				color1={"#2f4ea4"}
-				color2={"#2f4ea4"}
+				color1={"#2b30a9"}
+				color2={"#2b30a9"}
 				urls={["/rocks/R02.webp", "/rocks/R01.webp", "/rocks/R03.webp", "/rocks/R04.webp"]}
 				urlPreview={'url("/rocks/icon_rocks.webp")'}
 			>
@@ -160,32 +168,12 @@ export function ProjectList() {
 					Sur base des plans et dessins du projets, réalisation de la piscine et de l'environnement en 3D pour
 					présentation client.
 				</p>
-			</ProjectBase>
-			{/* Celeste */}
-			<ProjectBase
-				baseState={false}
-				title={"Guitare Celeste MCI"}
-				pills={["Modélisation 3D"]}
-				color1={"#2f4ea4"}
-				color2={"#2f4ea4"}
-				urls={[
-					"/celeste/C04.webp",
-					"/celeste/C03.webp",
-					"/celeste/C01.webp",
-					"/celeste/C02.webp",
-					"/celeste/C05.webp",
-				]}
-				urlPreview={'url("/celeste/icon_celeste.webp")'}
-			>
-				<p className='text-left mb-3'>
-					Sur base des dessins et fichiers (.dxf) déjà existant, création des fichiers 3D (.stl) compatible
-					pour les machines de conception.
-				</p>
+				<mesh />
 			</ProjectBase>
 			{/* Wally */}
 			<ProjectBase
 				baseState={false}
-				title={"Yacht Wally Esense 143"}
+				title={"Yacht Wally Esense"}
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#1360a7"}
 				color2={"#1360a7"}
@@ -205,6 +193,7 @@ export function ProjectList() {
 					Modélisation du Wally Esence 143 pour présentation client, besoin de rendus réalistes, animations de
 					caméra, texture procedurales, rendus 4K
 				</p>
+				<mesh />
 			</ProjectBase>
 		</section>
 	)

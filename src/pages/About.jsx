@@ -28,7 +28,7 @@ export function About() {
 			</section>
 			{/* Description */}
 			<section className='flex flex-col sm:flex-row items-center gap-8 mt-14 lg:mt-20 w-full'>
-				<div className='min-w-52 rounded-2xl overflow-hidden'>
+				<div className='max-w-52 rounded-2xl overflow-hidden'>
 					<img src='/about_01.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 				<div className='text-left mt-3 lg:-mt-5'>
@@ -139,11 +139,7 @@ export function About() {
 								• Réalisateur <br />• Cadreur sous-marin
 							</p>
 						</a>
-						<a
-							className='m-auto mt-0 hover:-translate-y-4 transition duration-500'
-							href='https://www.instagram.com/julie.gamba/'
-							target='_blank'
-						>
+						<a className='m-auto mt-0 hover:-translate-y-4 transition duration-500' target='_blank'>
 							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_jul.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Julie Gamba</b> <br />

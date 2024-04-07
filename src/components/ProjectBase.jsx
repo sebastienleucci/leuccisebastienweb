@@ -1,7 +1,4 @@
-import { OrbitControls, View } from "@react-three/drei"
-import { PerspectiveCamera } from "@react-three/drei"
-import { useState, useEffect, useRef } from "react"
-import { useFrame } from "@react-three/fiber"
+import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Slider from "react-slick"
 
@@ -21,43 +18,32 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 	}
 
 	return (
-		<section className='relative mt-16 mySection w-full sm:overflow-hidden flex flex-col rounded-xl'>
+		<section className='mt-16 mySection mx-auto w-full sm:overflow-hidden flex flex-col rounded-xl'>
 			<div className='flex flex-col sm:flex-row '>
 				<div
 					style={{
-						borderColor: `${urlPreview ? "transparent" : color1}`,
-						borderWidth: `${urlPreview ? "0" : "2px"}`,
 						backgroundImage: `${urlPreview}`,
 					}}
-					className='bg-cover bg-center hidden sm:flex sm:relative border-2 -mt-8 sm:mt-0 rounded-xl sm:min-w-40 sm:w-40 sm:h-40 sm:aspect-square overflow-hidden sm:overflow-visible'
-				>
-					<View className='absolute w-[130%] h-[130%] -ml-[15%] -mt-6 hover:cursor-pointer hidden sm:block'>
-						<PerspectiveCamera makeDefault position={[0, 0, 5]} />
-						<pointLight intensity={25} position={[2.5, 1, -1]} />
-						<pointLight intensity={25} position={[-2.5, 1, -1]} />
-						<pointLight intensity={25} position={[1.5, -2, 2]} />
-						<pointLight intensity={25} position={[-1.8, -0.5, 2]} />
-						<mesh>{children[1]}</mesh>
-						<OrbitControls enablePan={false} maxDistance={7} minDistance={3} />
-					</View>
-				</div>
+					onClick={toggle}
+					className='bg-cover bg-center hidden sm:flex sm:relative -mt-8 sm:mt-0 rounded-xl sm:min-w-40 sm:w-40 sm:h-40 sm:aspect-square overflow-hidden sm:overflow-visible hover:cursor-pointer pointer-events-none sm:pointer-events-auto'
+				></div>
 				<div
-					className='relative flex flex-col w-full pl-6 pr-5 hover:cursor-pointer'
+					className='relative flex flex-col w-full sm:pl-6 sm:pr-5 hover:cursor-pointer pointer-events-none sm:pointer-events-auto'
 					onClick={toggle}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
 				>
 					<div
-						className={`-z-30 absolute w-[95%] h-full duration-1000 ease-in-out ${
+						className={`-z-30 hidden sm:block absolute w-[95%] h-full duration-1000 ease-in-out ${
 							isHovered ? "opacity-75" : "opacity-0"
 						}`}
 						style={{ background: `radial-gradient(at top, ${color1} -200%, #ffffff 70%)` }}
 					></div>
 					<div
-						className={` h-[2px] bg-gradient-to-r mb-2`}
+						className={`h-[2px] bg-gradient-to-r mb-2`}
 						style={{ background: `linear-gradient(to right, ${color1}, ${color2})` }}
 					></div>
-					<h2 className='text-[1.6rem] sm:text-3xl font-bold text-left'>{title}</h2>
+					<h2 className='text-[1.6rem] mb:text-3xl font-bold text-left'>{title}</h2>
 					<ul className='flex gap-2 mt-2 sm:mt-2  whitespace-nowrap flex-wrap'>
 						{pills.map((value, index) => (
 							<li
@@ -69,9 +55,9 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 							</li>
 						))}
 					</ul>
-					<div className='mt-[0.7rem] sm:mt-2 text-left w-4/5'>{children[0]}</div>
+					<div className='mt-[0.7rem] sm:mt-2 text-left w-5/6'>{children}</div>
 				</div>
-				<button className='flex' onClick={toggle}>
+				<button className='hidden sm:flex ' onClick={toggle}>
 					<svg
 						className='mb-auto -mt-[10px]'
 						width='28'
@@ -85,17 +71,12 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 				</button>
 			</div>
 			{baseState ? (
-				<motion.div className='h-auto mt-6'>
-					<div className='slider-container rounded-xl overflow-hidden hover:cursor-pointer'>
+				<motion.div className='h-auto sm:mt-6 '>
+					<div className='slider-container rounded-xl overflow-hidden hover:cursor-pointer pointer-events-none sm:pointer-events-auto'>
 						<SimpleSlider>
 							{urls.map((url, index) => (
-								<div
-									key={index}
-									className={
-										"flex justify-center items-center overflow-hidden h-64 sm:h-[32rem] -mb-2"
-									}
-								>
-									<img src={url} className='min-h-full object-cover' />
+								<div key={index} className={"flex justify-center items-center overflow-hidden -mb-2"}>
+									<img src={url} />
 								</div>
 							))}
 						</SimpleSlider>
@@ -105,18 +86,13 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 				<motion.div
 					animate={{ height: open ? "auto" : 0 }}
 					transition={{ type: "easeOut" }}
-					className='h-0 mt-6'
+					className='h-0 sm:mt-6  '
 				>
-					<div className='slider-container rounded-xl overflow-hidden hover:cursor-pointer '>
+					<div className='slider-container  rounded-xl overflow-hidden hover:cursor-pointer '>
 						<SimpleSlider>
 							{urls.map((url, index) => (
-								<div
-									key={index}
-									className={
-										"flex justify-center items-center overflow-hidden h-64 sm:h-[32rem] -mb-2"
-									}
-								>
-									<img src={url} className='min-h-full object-cover' />
+								<div key={index} className={"flex justify-center items-center overflow-hidden -mb-2"}>
+									<img src={url} />
 								</div>
 							))}
 						</SimpleSlider>
@@ -126,8 +102,6 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 		</section>
 	)
 }
-
-
 
 function OpenCloseResizing({ open, toggle }) {
 	const [isMobile, setIsMobile] = useState(false)
