@@ -46,7 +46,7 @@ export function About() {
 				<div className='text-left lg:-mt-5 flex-1'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Formations</h1>
 					<p className='sm:text-lg sm:leading-6 '>
-						<b>•</b> Formation initiale en Design de produit (Bachelor) <br />
+						<b>•</b> Formation initiale en Design de Produit (Bachelor) <br />
 						<b>• Indépendant depuis bientôt 4 ans </b> <br />
 						<b>•</b> Professionnel et passionné par la modélisation 3D <br />
 						<b>•</b> Formé à la création de sites Web (OpenClassrooms.com / Grafikart.fr) <br />
@@ -107,8 +107,8 @@ export function About() {
 				<div className='text-left lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Phrase d'accroche</h1>
 					<p className='sm:text-lg sm:leading-6'>
-						Créer des projets cohérents et avoir <b>le soucis du détail</b> sont des notions
-						particulièrement importantes et si vous avez lu jusqu'ici bien joué, franchement j'aurais pas
+						Créer des projets cohérents et avoir <b>le souci du détail</b> sont des notions
+						particulièrement importantes et si vous avez lu jusqu'ici, bien joué, franchement j'aurais pas
 						lu.
 					</p>
 				</div>
