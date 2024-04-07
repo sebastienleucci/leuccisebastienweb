@@ -120,10 +120,7 @@ export function About() {
 					<p className='sm:text-lg sm:leading-6'>
 						Pouvoir <b>évoluer en équipe</b> est une notion importante, c'est pourquoi je travaille avec{" "}
 						<b>des partenaires fiables</b> spécialisés dans <b>des domaines complémentaires</b> qui peuvent
-						convenir pour des projets d'ampleur. <br />
-						<br />
-						Je vous laisse le soin nous contacter si nos compétences communes vous intéressent ou si leurs
-						profils individuels peuvent répondre à vos besoins.
+						convenir pour des projets d'ampleur.
 					</p>
 
 					<div className='flex flex-wrap gap-4 mt-10 m-auto'>
@@ -167,7 +164,7 @@ export function About() {
 							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_lau.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Laura Meunier</b> <br />
-								• Consultabte en stratégie de communication <br />
+								• Consultante en stratégie de communication <br />
 								• Formatrice en planning stratégique <br />
 							</p>
 						</a>

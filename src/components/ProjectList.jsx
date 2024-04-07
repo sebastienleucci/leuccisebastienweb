@@ -164,10 +164,10 @@ export function ProjectList() {
 			{/* Celeste */}
 			<ProjectBase
 				baseState={false}
-				title={"Guitare Celeste MCI"}
+				title={"Guitare Céleste MCI"}
 				pills={["Modélisation 3D"]}
-				color1={"#2f4ea4"}
-				color2={"#2f4ea4"}
+				color1={"#9f4525"}
+				color2={"#9f4525"}
 				urls={[
 					"/celeste/C04.webp",
 					"/celeste/C03.webp",
@@ -180,6 +180,15 @@ export function ProjectList() {
 				<p className='text-left mb-3'>
 					Sur base des dessins et fichiers (.dxf) déjà existant, création des fichiers 3D (.stl) compatible
 					pour les machines de conception.
+					<br />
+					Voir la collection
+					<a
+						href='https://celeste-guitars.com/collection-mc1/'
+						target='_blank'
+						className='text-[#9f4525] font-bold underline pl-1'
+					>
+						Céleste MCI
+					</a>
 				</p>
 			</ProjectBase>
 			{/* Wally */}
