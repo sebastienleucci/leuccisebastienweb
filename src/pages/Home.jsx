@@ -16,10 +16,13 @@ export function Home() {
 							className='w-fit bg-gradient-to-r from-[#8F062F] to-[#cc4e3f] text-sm sm:text-base h-fit min-w-fit py-[5px] px-4 rounded-3xl mt-10 lg:mt-16 font-semibold text-white'
 						>
 							Me contacter{" "}
-							<img src='/arrow-right.svg' className='inline w-5 ml-6 sm:ml-10 -mt-[1px] -mr-1' />
+							<img
+								src='/src/assets/icons/arrow-right.svg'
+								className='inline w-5 ml-6 sm:ml-10 -mt-[1px] -mr-1'
+							/>
 						</Link>
 						<div>
-							<img src='/Acc_01.webp' className='mr-10 mt-8 mb:mt-0 ' />
+							<img src='/src/assets/img/Acc_01.webp' className='mr-10 mt-8 mb:mt-0 ' />
 						</div>
 					</div>
 				</div>

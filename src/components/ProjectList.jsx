@@ -11,18 +11,18 @@ export function ProjectList() {
 				color1={"#bf854b"}
 				color2={"#9f481f"}
 				urls={[
-					"/lunettes/05.2.webp",
-					"/lunettes/05.1.webp",
-					"/lunettes/03.2.webp",
-					"/lunettes/03.1.webp",
-					"/lunettes/01.2.webp",
-					"/lunettes/01.1.webp",
-					"/lunettes/02.2.webp",
-					"/lunettes/02.1.webp",
-					"/lunettes/04.2.webp",
-					"/lunettes/04.1.webp",
+					"/src/assets/img_projets/lunettes/05.2.webp",
+					"/src/assets/img_projets/lunettes/05.1.webp",
+					"/src/assets/img_projets/lunettes/03.2.webp",
+					"/src/assets/img_projets/lunettes/03.1.webp",
+					"/src/assets/img_projets/lunettes/01.2.webp",
+					"/src/assets/img_projets/lunettes/01.1.webp",
+					"/src/assets/img_projets/lunettes/02.2.webp",
+					"/src/assets/img_projets/lunettes/02.1.webp",
+					"/src/assets/img_projets/lunettes/04.2.webp",
+					"/src/assets/img_projets/lunettes/04.1.webp",
 				]}
-				urlPreview={'url("/lunettes/icon_lunettes.webp")'}
+				urlPreview={'url("/src/assets/img_projets/lunettes/icon_lunettes.webp")'}
 			>
 				<div>
 					<p className='text-left mb-3'>
@@ -59,13 +59,13 @@ export function ProjectList() {
 				color1={"#be2822"}
 				color2={"#be2822"}
 				urls={[
-					"/MYC/myc_03.webp",
-					"/MYC/myc_02.webp",
-					"/MYC/myc_04.webp",
-					"/MYC/myc_05.webp",
-					"/MYC/myc_01.webp",
+					"/src/assets/img_projets/MYC/myc_03.webp",
+					"/src/assets/img_projets/MYC/myc_02.webp",
+					"/src/assets/img_projets/MYC/myc_04.webp",
+					"/src/assets/img_projets/MYC/myc_05.webp",
+					"/src/assets/img_projets/MYC/myc_01.webp",
 				]}
-				urlPreview={'url("/MYC/icon_myc.webp")'}
+				urlPreview={'url("/src/assets/img_projets/MYC/icon_myc.webp")'}
 			>
 				<p className='text-left mb-3'>
 					À l'occasion des 70 ans du Yacht Club de Monaco, animation d'un livre 3D pour rappels des évènement
@@ -80,14 +80,14 @@ export function ProjectList() {
 				color1={"#089384"}
 				color2={"#089384"}
 				urls={[
-					"/nepal/Na.webp",
-					"/nepal/Nc.webp",
-					"/nepal/Nd.webp",
-					"/nepal/Nf.webp",
-					"/nepal/Ng.webp",
-					"/nepal/Nh.webp",
+					"/src/assets/img_projets/nepal/Na.webp",
+					"/src/assets/img_projets/nepal/Nc.webp",
+					"/src/assets/img_projets/nepal/Nd.webp",
+					"/src/assets/img_projets/nepal/Nf.webp",
+					"/src/assets/img_projets/nepal/Ng.webp",
+					"/src/assets/img_projets/nepal/Nh.webp",
 				]}
-				urlPreview={'url("/nepal/icon_nepal.webp")'}
+				urlPreview={'url("/src/assets/img_projets/nepal/icon_nepal.webp")'}
 			>
 				<div className='mb-3'>
 					<p className='text-left'>
@@ -112,19 +112,19 @@ export function ProjectList() {
 				color1={"#da5432"}
 				color2={"#da5432"}
 				urls={[
-					"/riva/riva_09.webp",
-					"/riva/riva_10.webp",
-					"/riva/riva_11.webp",
-					"/riva/riva_07.webp",
-					"/riva/riva_06.webp",
-					"/riva/riva_05.webp",
-					"/riva/riva_04.webp",
+					"/src/assets/img_projets/riva/riva_09.webp",
+					"/src/assets/img_projets/riva/riva_10.webp",
+					"/src/assets/img_projets/riva/riva_11.webp",
+					"/src/assets/img_projets/riva/riva_07.webp",
+					"/src/assets/img_projets/riva/riva_06.webp",
+					"/src/assets/img_projets/riva/riva_05.webp",
+					"/src/assets/img_projets/riva/riva_04.webp",
 
-					"/riva/riva_08.webp",
-					"/riva/riva_03.webp",
-					"/riva/riva_02.webp",
+					"/src/assets/img_projets/riva/riva_08.webp",
+					"/src/assets/img_projets/riva/riva_03.webp",
+					"/src/assets/img_projets/riva/riva_02.webp",
 				]}
-				urlPreview={'url("/riva/icon_riva.webp")'}
+				urlPreview={'url("/src/assets/img_projets/riva/icon_riva.webp")'}
 			>
 				<p className='text-left mb-3'>
 					Missionné pour la modélisation du yacht RIVA par Monaco Piscine et y appliquer des modifications
@@ -138,8 +138,8 @@ export function ProjectList() {
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#989986"}
 				color2={"#989986"}
-				urls={["/homnes/H01.webp", "/homnes/H03.webp", "/homnes/H02.webp", "/homnes/H04.webp"]}
-				urlPreview={'url("/homnes/icon_homnes.webp")'}
+				urls={["/src/assets/img_projets/homnes/H01.webp", "/src/assets/img_projets/homnes/H03.webp", "/src/assets/img_projets/homnes/H02.webp", "/src/assets/img_projets/homnes/H04.webp"]}
+				urlPreview={'url("/src/assets/img_projets/homnes/icon_homnes.webp")'}
 			>
 				<p className='text-left mb-3'>
 					Mise en scène du packaging et des shampoings naturels. Animation 3D et Loop des shampoings pour le
@@ -153,8 +153,8 @@ export function ProjectList() {
 				pills={["Modélisation 3D"]}
 				color1={"#2f4ea4"}
 				color2={"#2f4ea4"}
-				urls={["/rocks/R02.webp", "/rocks/R01.webp", "/rocks/R03.webp", "/rocks/R04.webp"]}
-				urlPreview={'url("/rocks/icon_rocks.webp")'}
+				urls={["/src/assets/img_projets/rocks/R02.webp", "/src/assets/img_projets/rocks/R01.webp", "/src/assets/img_projets/rocks/R03.webp", "/src/assets/img_projets/rocks/R04.webp"]}
+				urlPreview={'url("/src/assets/img_projets/rocks/icon_rocks.webp")'}
 			>
 				<p className='text-left mb-3'>
 					Sur base des plans et dessins du projets, réalisation de la piscine et de l'environnement en 3D pour
@@ -169,13 +169,13 @@ export function ProjectList() {
 				color1={"#9f4525"}
 				color2={"#9f4525"}
 				urls={[
-					"/celeste/C04.webp",
-					"/celeste/C03.webp",
-					"/celeste/C01.webp",
-					"/celeste/C02.webp",
-					"/celeste/C05.webp",
+					"/src/assets/img_projets/celeste/C04.webp",
+					"/src/assets/img_projets/celeste/C03.webp",
+					"/src/assets/img_projets/celeste/C01.webp",
+					"/src/assets/img_projets/celeste/C02.webp",
+					"/src/assets/img_projets/celeste/C05.webp",
 				]}
-				urlPreview={'url("/celeste/icon_celeste.webp")'}
+				urlPreview={'url("/src/assets/img_projets/celeste/icon_celeste.webp")'}
 			>
 				<p className='text-left mb-3'>
 					Sur base des dessins et fichiers (.dxf) déjà existant, création des fichiers 3D (.stl) compatible
@@ -199,16 +199,16 @@ export function ProjectList() {
 				color1={"#1360a7"}
 				color2={"#1360a7"}
 				urls={[
-					"/wally/wally_01.webp",
-					"/wally/wally_02.webp",
-					"/wally/wally_03.webp",
-					"/wally/wally_04.webp",
-					"/wally/wally_05.webp",
-					"/wally/wally_06.webp",
-					"/wally/wally_07.webp",
-					"/wally/wally_08.webp",
+					"/src/assets/img_projets/wally/wally_01.webp",
+					"/src/assets/img_projets/wally/wally_02.webp",
+					"/src/assets/img_projets/wally/wally_03.webp",
+					"/src/assets/img_projets/wally/wally_04.webp",
+					"/src/assets/img_projets/wally/wally_05.webp",
+					"/src/assets/img_projets/wally/wally_06.webp",
+					"/src/assets/img_projets/wally/wally_07.webp",
+					"/src/assets/img_projets/wally/wally_08.webp",
 				]}
-				urlPreview={'url("/wally/wally_icon.webp")'}
+				urlPreview={'url("/src/assets/img_projets/wally/wally_icon.webp")'}
 			>
 				<p className='text-left mb-3'>
 					Modélisation du Wally Esence 143 pour présentation client, besoin de rendus réalistes, animations de

@@ -13,16 +13,16 @@ export function Footer() {
 			</nav>
 			<nav className='m-auto flex justify-center gap-8 px-5'>
 				<Link to='/' className='font-bold'>
-					<img src='/brand-instagram.svg' className='w-10' />
+					<img src='/src/assets/icons/brand-instagram.svg' className='w-10' />
 				</Link>
 				<Link to='/' className='font-bold'>
-					<img src='/brand-linkedin.svg' className='w-10' />
+					<img src='/src/assets/icons/brand-linkedin.svg' className='w-10' />
 				</Link>
 				<Link to='/' className='font-bold'>
-					<img src='/brand-behance.svg' className='w-10' />
+					<img src='/src/assets/icons/brand-behance.svg' className='w-10' />
 				</Link>
 			</nav>
-            <p className="py-4">Créé par Sébastien Leucci - Copyright 2024 - Tous droits réservés</p>
+			<p className='py-4'>Créé par Sébastien Leucci - Copyright 2024 - Tous droits réservés</p>
 		</header>
 	)
 }

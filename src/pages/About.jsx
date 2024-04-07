@@ -29,7 +29,7 @@ export function About() {
 			{/* Description */}
 			<section className='flex flex-col sm:flex-row items-center gap-8 mt-14 lg:mt-20 w-full'>
 				<div className='max-w-52 rounded-2xl overflow-hidden'>
-					<img src='/about_01.webp' className='transition duration-500 hover:scale-110' />
+					<img src='/src/assets/img/about_01.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 				<div className='text-left mt-3 lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Description succincte</h1>
@@ -54,14 +54,14 @@ export function About() {
 					</p>
 				</div>
 				<div className='w-52 rounded-2xl overflow-hidden'>
-					<img src='/about_03.webp' className='transition duration-500 hover:scale-110' />
+					<img src='/src/assets/img/about_03.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 			</section>
 			{/* Photo */}
 			<section className='items-left gap-8 mt-12 lg:mt-16'>
 				<div className='text-left lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Photo</h1>
-					<div className="w-[12rem] lg:w-[15rem] aspect-square bg-[url('/moi_500.web.webp')] bg-cover rounded-2xl"></div>
+					<div className="w-[12rem] lg:w-[15rem] aspect-square bg-[url('/src/assets/img/moi_500.web.webp')] bg-cover rounded-2xl"></div>
 				</div>
 			</section>
 			{/* Compétences */}
@@ -96,13 +96,13 @@ export function About() {
 					</div>
 				</div>
 				<div className='w-52 rounded-2xl mt-3 sm:mt-0 overflow-hidden'>
-					<img src='/about_04.webp' className='transition duration-500 hover:scale-110' />
+					<img src='/src/assets/img/about_04.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 			</section>
 			{/* Phrase accroche */}
 			<section className='flex flex-col-reverse sm:flex-row items-center gap-8 mt-12 lg:mt-16 w-full'>
 				<div className='max-w-52 rounded-2xl overflow-hidden mt-3 sm:mt-0'>
-					<img src='/about_02.webp' className='transition duration-500 hover:scale-110' />
+					<img src='/src/assets/img/about_02.webp' className='transition duration-500 hover:scale-110' />
 				</div>
 				<div className='text-left lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Phrase d'accroche</h1>
@@ -129,7 +129,7 @@ export function About() {
 							href='https://www.linkedin.com/in/jimmy-golaz-76346579/'
 							target='_blank'
 						>
-							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_jim.webp')] bg-cover rounded-2xl"></div>
+							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/src/assets/img/pro_jim.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Jimmy Golaz</b> <br />
 								• Directeur de production <br />
@@ -137,7 +137,7 @@ export function About() {
 							</p>
 						</a>
 						<a className='m-auto mt-0 hover:-translate-y-4 transition duration-500' target='_blank'>
-							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_jul.webp')] bg-cover rounded-2xl"></div>
+							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/src/assets/img/pro_jul.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Julie Gamba</b> <br />
 								• Directrice artistique <br />
@@ -149,7 +149,7 @@ export function About() {
 							href='https://www.costanzamariabarbiniai.com/'
 							target='_blank'
 						>
-							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_cost.webp')] bg-cover rounded-2xl"></div>
+							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/src/assets/img/pro_cost.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Costanza Barbini</b> <br />
 								• Architecte d'intérieur <br />
@@ -161,7 +161,7 @@ export function About() {
 							href='https://www.linkedin.com/in/laura-meunier/'
 							target='_blank'
 						>
-							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/pro_lau.webp')] bg-cover rounded-2xl"></div>
+							<div className="w-[10rem] lg:w-[14.5rem] aspect-square bg-[url('/src/assets/img/pro_lau.webp')] bg-cover rounded-2xl"></div>
 							<p className='sm:text-lg sm:leading-6 mt-2 w-[10rem] lg:w-[14.5rem]'>
 								<b>Laura Meunier</b> <br />
 								• Consultante en stratégie de communication <br />
