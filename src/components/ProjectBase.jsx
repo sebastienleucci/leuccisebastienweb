@@ -40,7 +40,7 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 						style={{ background: `radial-gradient(at top, ${color1} -200%, #ffffff 70%)` }}
 					></div>
 					<div
-						className={`h-[2px] bg-gradient-to-r mb-2`}
+						className={`mt-[1px] pb-[2px] z-50 bg-gradient-to-r mb-2`}
 						style={{ background: `linear-gradient(to right, ${color1}, ${color2})` }}
 					></div>
 					<h2 className='text-[1.6rem] mb:text-3xl font-bold text-left'>{title}</h2>
@@ -55,7 +55,7 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 							</li>
 						))}
 					</ul>
-					<div className='mt-[0.7rem] sm:mt-2 text-left w-5/6'>{children}</div>
+					<div className='mt-[0.7rem] sm:mt-2 text-left md:w-5/6'>{children}</div>
 				</div>
 				<button className='hidden sm:flex ' onClick={toggle}>
 					<svg

@@ -188,7 +188,7 @@ export function ProjectList() {
 				urlPreview={'url("/projets/celeste/icon_celeste.webp")'}
 			>
 				<p className='text-left mb-3'>
-					Sur base des dessins et fichiers (.dxf) déjà existant, création des fichiers 3D (.stl) compatible
+					Sur base des dessins et fichiers (.dxf) déjà existant, création des fichiers 3D (.stl) compatibles
 					pour les machines de conception.
 					<br />
 					Voir la collection

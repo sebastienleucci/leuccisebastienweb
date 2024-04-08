@@ -16,7 +16,7 @@ export function Header() {
 
 				{/* Mobile */}
 				<button onClick={toggle} className='md:hidden my-auto ml-auto'>
-					<img src='/menu-2.svg' className='w-10' />
+					<img src='/icons/menu-2.svg' className='w-10' />
 				</button>
 
 				{/* Desktop */}
