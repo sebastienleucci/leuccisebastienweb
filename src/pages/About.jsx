@@ -61,7 +61,7 @@ export function About() {
 			<section className='items-left gap-8 mt-12 lg:mt-16'>
 				<div className='text-left lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Photo</h1>
-					<div className="w-[12rem] lg:w-[15rem] aspect-square bg-[url('/img/moi_500.web.webp')] bg-cover rounded-2xl"></div>
+					<div className="w-[12rem] lg:w-[15rem] aspect-square bg-[url('/img/moi_500.webp')] bg-cover rounded-2xl"></div>
 				</div>
 			</section>
 			{/* Compétences */}
@@ -107,9 +107,8 @@ export function About() {
 				<div className='text-left lg:-mt-5'>
 					<h1 className='text-2xl sm:text-4xl lg:text-[3.4rem] lg:mb-5 font-bold'>Phrase d'accroche</h1>
 					<p className='sm:text-lg sm:leading-6'>
-						Créer des projets cohérents et avoir <b>le souci du détail</b> sont des notions
-						particulièrement importantes et si vous avez lu jusqu'ici, bien joué, franchement j'aurais pas
-						lu.
+						Créer des projets cohérents et avoir <b>le souci du détail</b> sont des notions particulièrement
+						importantes et si vous avez lu jusqu'ici, bien joué, franchement j'aurais pas lu.
 					</p>
 				</div>
 			</section>
