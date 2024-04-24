@@ -3,7 +3,6 @@ import { ProjectWebWide } from "./ProjectWebWide"
 
 export function ProjectList() {
 	return (
-        
 		<section className='w-full -mt-16'>
 			{/* Lunettes Ghyara */}
 			<ProjectBase
@@ -107,7 +106,7 @@ export function ProjectList() {
 				</div>
 			</ProjectBase>
 			{/* Web Neobrutalism */}
-			<ProjectWebWide
+			{/* <ProjectWebWide
 				baseState={false}
 				title={"Design Study: Neobrutalism"}
 				pills={["Design UI", "React", "Tailwind"]}
@@ -116,10 +115,10 @@ export function ProjectList() {
 				urlPreview={'url("/projets/neo/icon_neo.webp")'}
 			>
 				<p className='text-left mb-3'>
-					Découverte du Néobrutalism, courrant de design mineur mais ayant ses spécificités propres plutot
-					interessantes
+					Découverte du Néobrutalism, courant de design mineur mais ayant ses spécificités propres plutot
+					intéressantes
 				</p>
-			</ProjectWebWide>
+			</ProjectWebWide> */}
 			{/* Riva */}
 			<ProjectBase
 				baseState={false}

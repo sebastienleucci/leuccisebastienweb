@@ -78,9 +78,9 @@ export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, 
 			</div>
 			{/* Project Open */}
 			<motion.div
-				animate={{ height: open ? "auto" : "auto" }}
+				animate={{ height: open ? "auto" : 0 }}
 				transition={{ type: "easeOut" }}
-				className='h-0 sm:mt-6'
+				className='h-0 sm:mt-8'
 			>
 				<div
 					className='flex border-y-3 border-black bg-center *:font-spartan'
@@ -122,79 +122,7 @@ export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, 
 							<GraphMain />
 						</section>
 						{/* Timer project */}
-						<section className='relative flex flex-col min-h-full min-w-80 w-full max-w-[26rem] bg-white border-3 border-black rounded-3xl py-6 overflow-hidden'>
-							<h3 className='text-3xl font-medium max-w-72 m-auto'>Timer project</h3>
-							<p className='text-xl text-center font-extralight leading-5'>Online for</p>
-							<div className='flex w-full max-w-72 m-auto mt-5 gap-3'>
-								<div className='flex flex-col items-center'>
-									<button className='h-full w-min'>
-										<div className='w-[60px] h-[60px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
-										<div className='w-[60px] h-[60px] -mt-[64px] -ml-[4px] hover:-mt-[60px] hover:-mb-[4px] hover:ml-0 bg-red-400 flex justify-between rounded-xl border-3 border-black duration-200'>
-											<h6 className='text-2xl font-semibold m-auto mt-3'>248</h6>
-										</div>
-									</button>
-									<p className='text-xl text-left font-medium leading-5 mt-3'>
-										<span className='text-red-400'>D</span>ays
-									</p>
-								</div>
-								<div className='flex flex-col m-auto gap-1 pb-7'>
-									<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
-									<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
-								</div>
-								<div className='flex flex-col items-center'>
-									<button className='h-full w-min'>
-										<div className='w-[60px] h-[60px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
-										<div className='w-[60px] h-[60px] -mt-[64px] -ml-[4px] hover:-mt-[60px] hover:-mb-[4px] hover:ml-0 bg-red-400 flex justify-between rounded-xl border-3 border-black duration-200'>
-											<h6 className='text-2xl font-semibold m-auto -mb-[1px] mt-3'>8</h6>
-										</div>
-									</button>
-									<p className='text-xl text-left font-medium leading-5 mt-3'>
-										<span className='text-red-400'>H</span>ours
-									</p>
-								</div>
-								<div className='flex flex-col m-auto gap-1 pb-7'>
-									<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
-									<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
-								</div>
-								<div className='flex flex-col items-center'>
-									<button className='h-full w-min'>
-										<div className='w-[60px] h-[60px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
-										<div className='w-[60px] h-[60px] -mt-[64px] -ml-[4px] hover:-mt-[60px] hover:-mb-[4px] hover:ml-0 bg-red-400 flex justify-between rounded-xl border-3 border-black duration-200'>
-											<h6 className='text-2xl font-semibold m-auto -mb-[1px] mt-3'>25</h6>
-										</div>
-									</button>
-									<p className='text-xl text-left font-medium leading-5 mt-3'>
-										<span className='text-red-400'>M</span>ins
-									</p>
-								</div>
-							</div>
-							<h3 className='text-3xl font-medium max-w-72 mt-10 mb-5 mx-auto'>Skills involved</h3>
-							<div className='w-full flex flex-col gap-5'>
-								<ButtonPop name='UI Design' icon='/icons/mini-star.svg' color='bg-red-400' />
-								<ButtonPop name='Figma' icon='/icons/mini-star.svg' color='bg-red-400' />
-								<ButtonPop name='React' icon='/icons/mini-heart.svg' color='bg-[#ffb26b]' />
-								<ButtonPop name='Javascript' icon='/icons/mini-heart.svg' color='bg-[#ffb26b]' />
-							</div>
-							<p className='-mb-5 mt-8'>
-								*Original counter design: <span className='text-red-400'>@Sepidy</span>
-							</p>
-							<img
-								src='/icons/star-black.svg'
-								className='absolute top-80 rotate-[20deg] -left-[45px] w-[120px]'
-							/>
-							<img
-								src='/icons/star-red.svg'
-								className='absolute top-[300px] rotate-[20deg] -left-[40px] w-[120px]'
-							/>
-							<img
-								src='/icons/heart-black.svg'
-								className='absolute bottom-20 -rotate-[20deg] -right-[30px] w-[100px]'
-							/>
-							<img
-								src='/icons/heart-orange.svg'
-								className='absolute bottom-24 -rotate-[20deg] -right-[25px] w-[100px]'
-							/>
-						</section>
+						<SectionTimer />
 						{/* Define Project */}
 						<section className='relative flex flex-col min-h-full min-w-80 w-full max-w-[24rem] rounded-3xl py-6 bg-red-400 border-3 border-black overflow-hidden'>
 							<h3 className='text-3xl font-medium'>Define your project</h3>
@@ -205,23 +133,103 @@ export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, 
 						</section>
 					</div>
 				</div>
-				<div className='h-96 border-b-3 border-black'></div>
+				{/* <div className='h-96 border-b-3 border-black'></div> */}
 			</motion.div>
 		</section>
 	)
 }
 
-function ButtonPop({ name, icon, color }) {
+//SECTION TIMER
+function SectionTimer() {
+	const [days, setDays] = useState(0)
+	const [hours, setHours] = useState(0)
+	const [minutes, setMinutes] = useState(0)
+	// const [seconds, setSeconds] = useState(0)
+
+	useEffect(() => {
+		const projectStartDate = new Date("2024-04-23T00:00:00")
+		const updateDuration = () => {
+			const now = new Date()
+			const duration = now - projectStartDate
+
+			// const newSeconds = Math.floor((duration / 1000) % 60)
+			const newMinutes = Math.floor((duration / (1000 * 60)) % 60)
+			const newHours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+			const newDays = Math.floor(duration / (1000 * 60 * 60 * 24))
+
+			// setSeconds(newSeconds)
+			setMinutes(newMinutes)
+			setHours(newHours)
+			setDays(newDays)
+		}
+
+		const interval = setInterval(updateDuration, 1000)
+
+		return () => clearInterval(interval)
+	}, [])
+
 	return (
-		<button className='m-auto h-full w-min'>
-			<div className='w-[200px] h-[50px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
-			<div
-				className={`w-[200px] h-[50px] -mt-[54px] -ml-[4px] hover:-mt-[50px] hover:-mb-[4px]  hover:ml-0  p-2 ${color} flex justify-between rounded-xl border-3 border-black duration-200`}
-			>
-				<h6 className='text-xl font-semibold m-auto ml-0 mt-[1px]'>{name}</h6>
-				<img src={icon} className='w-6 m-auto mr-0' />
+		<section className='relative flex flex-col min-h-full min-w-80 w-full max-w-[26rem] bg-white border-3 border-black rounded-3xl py-6 overflow-hidden'>
+			<h3 className='text-3xl font-medium max-w-72 m-auto'>Timer project</h3>
+			<p className='text-xl text-center font-extralight leading-5'>Online for</p>
+			<div className='flex w-full max-w-72 m-auto mt-5 gap-3'>
+				<div className='flex flex-col items-center'>
+					<button className='h-full w-min'>
+						<div className='w-[60px] h-[60px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
+						<div className='w-[60px] h-[60px] -mt-[64px] -ml-[4px] hover:-mt-[60px] hover:-mb-[4px] hover:ml-0 bg-red-400 flex justify-between rounded-xl border-3 border-black duration-200'>
+							<h6 className='text-2xl font-semibold m-auto mt-3'>{days}</h6>
+						</div>
+					</button>
+					<p className='text-xl text-left font-medium leading-5 mt-3'>
+						<span className='text-red-400'>D</span>ays
+					</p>
+				</div>
+				<div className='flex flex-col m-auto gap-1 pb-7'>
+					<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
+					<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
+				</div>
+				<div className='flex flex-col items-center'>
+					<button className='h-full w-min'>
+						<div className='w-[60px] h-[60px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
+						<div className='w-[60px] h-[60px] -mt-[64px] -ml-[4px] hover:-mt-[60px] hover:-mb-[4px] hover:ml-0 bg-red-400 flex justify-between rounded-xl border-3 border-black duration-200'>
+							<h6 className='text-2xl font-semibold m-auto -mb-[1px] mt-3'>{hours}</h6>
+						</div>
+					</button>
+					<p className='text-xl text-left font-medium leading-5 mt-3'>
+						<span className='text-red-400'>H</span>ours
+					</p>
+				</div>
+				<div className='flex flex-col m-auto gap-1 pb-7'>
+					<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
+					<div className='h-[6px] w-[6px] bg-black rounded-full mr-1'></div>
+				</div>
+				<div className='flex flex-col items-center'>
+					<button className='h-full w-min'>
+						<div className='w-[60px] h-[60px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
+						<div className='w-[60px] h-[60px] -mt-[64px] -ml-[4px] hover:-mt-[60px] hover:-mb-[4px] hover:ml-0 bg-red-400 flex justify-between rounded-xl border-3 border-black duration-200'>
+							<h6 className='text-2xl font-semibold m-auto -mb-[1px] mt-3'>{minutes}</h6>
+						</div>
+					</button>
+					<p className='text-xl text-left font-medium leading-5 mt-3'>
+						<span className='text-red-400'>M</span>ins
+					</p>
+				</div>
 			</div>
-		</button>
+			<h3 className='text-3xl font-medium max-w-72 mt-10 mb-5 mx-auto'>Skills involved</h3>
+			<div className='w-full flex flex-col gap-5'>
+				<ButtonPop name='UI Design' icon='/icons/mini-star.svg' color='bg-red-400' />
+				<ButtonPop name='Figma' icon='/icons/mini-star.svg' color='bg-red-400' />
+				<ButtonPop name='React' icon='/icons/mini-heart.svg' color='bg-[#ffb26b]' />
+				<ButtonPop name='Javascript' icon='/icons/mini-heart.svg' color='bg-[#ffb26b]' />
+			</div>
+			<p className='-mb-5 mt-8'>
+				*Original counter design: <span className='text-red-400'>@Sepidy</span>
+			</p>
+			<img src='/icons/star-black.svg' className='absolute top-80 rotate-[20deg] -left-[45px] w-[120px]' />
+			<img src='/icons/star-red.svg' className='absolute top-[300px] rotate-[20deg] -left-[40px] w-[120px]' />
+			<img src='/icons/heart-black.svg' className='absolute bottom-20 -rotate-[20deg] -right-[30px] w-[100px]' />
+			<img src='/icons/heart-orange.svg' className='absolute bottom-24 -rotate-[20deg] -right-[25px] w-[100px]' />
+		</section>
 	)
 }
 
@@ -258,22 +266,16 @@ function GraphMain() {
 					On similar posts TikTok engages x4 more community compared to Instagram
 				</p>
 			</div>
-			<GraphColView name={"Penguins"} isTiktok={true} nbrView={"62.3K"} nbrLike={"1.2K"} height={"h-[22rem]"} />
-			<GraphColView name={"On hit"} isTiktok={true} nbrView={"15.6K"} nbrLike={"960"} height={"h-[7.4rem]"} />
-			<GraphColView name={"Penguins"} isTiktok={false} nbrView={"12.6K"} nbrLike={"850"} height={"h-[7rem]"}>
+			<GraphColView name={"Penguins"} isTiktok={true} nbrView={"62.3K"} nbrLike={"1.2K"} height={"22"} />
+			<GraphColView name={"On hit"} isTiktok={true} nbrView={"15.6K"} nbrLike={"960"} height={"7.4"} />
+			<GraphColView name={"Penguins"} isTiktok={false} nbrView={"12.6K"} nbrLike={"850"} height={"7"}>
 				<p className='w-full ml-[11px] mb-1 text-left font-extralight leading-4'>
 					Sole reel <br /> above 10K
 				</p>
 			</GraphColView>
-			<GraphColView name={"Bracelet"} isTiktok={true} nbrView={"11.5K"} nbrLike={"750"} height={"h-[5.2rem]"} />
+			<GraphColView name={"Bracelet"} isTiktok={true} nbrView={"11.5K"} nbrLike={"750"} height={"5.2"} />
 			{!isNarrow && (
-				<GraphColView
-					name={"Dumbells"}
-					isTiktok={true}
-					nbrView={"11.3K"}
-					nbrLike={"650"}
-					height={"h-[4.2rem]"}
-				/>
+				<GraphColView name={"Dumbells"} isTiktok={true} nbrView={"11.3K"} nbrLike={"650"} height={"4.2"} />
 			)}
 		</div>
 	)
@@ -284,7 +286,7 @@ function GraphColView({ name, isTiktok, nbrView, nbrLike, height, children }) {
 		<div className='max-w-28 min-w-[68px] flex flex-1 flex-col items-center '>
 			{children}
 			<div
-				className={`w-full p-1 mb-[6px] flex flex-col justify-between ${height} ${
+				className={`w-full p-1 mb-[6px] flex flex-col justify-between h-[${height}rem] ${
 					isTiktok ? "bg-[#78ffe7]" : "bg-[#ffb26b]"
 				}  rounded-xl border-3 border-black`}
 			>
@@ -434,4 +436,18 @@ function useToggle(initialValue) {
 		return updatedValue
 	}
 	return [value, toggle]
+}
+
+function ButtonPop({ name, icon, color }) {
+	return (
+		<button className='m-auto h-full w-min'>
+			<div className='w-[200px] h-[50px] mt-0 bg-black flex rounded-xl border-3 border-black'></div>
+			<div
+				className={`w-[200px] h-[50px] -mt-[54px] -ml-[4px] hover:-mt-[50px] hover:-mb-[4px]  hover:ml-0  p-2 ${color} flex justify-between rounded-xl border-3 border-black duration-200`}
+			>
+				<h6 className='text-xl font-semibold m-auto ml-0 mt-[1px]'>{name}</h6>
+				<img src={icon} className='w-6 m-auto mr-0' />
+			</div>
+		</button>
+	)
 }
