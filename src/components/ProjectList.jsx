@@ -106,7 +106,7 @@ export function ProjectList() {
 				</div>
 			</ProjectBase>
 			{/* Web Neobrutalism */}
-			{/* <ProjectWebWide
+			<ProjectWebWide
 				baseState={false}
 				title={"Design Study: Neobrutalism"}
 				pills={["Design UI", "React", "Tailwind"]}
@@ -118,7 +118,7 @@ export function ProjectList() {
 					Découverte du Néobrutalism, courant de design mineur mais ayant ses spécificités propres plutot
 					intéressantes
 				</p>
-			</ProjectWebWide> */}
+			</ProjectWebWide>
 			{/* Riva */}
 			<ProjectBase
 				baseState={false}

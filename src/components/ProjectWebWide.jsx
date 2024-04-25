@@ -5,7 +5,7 @@ import "./ProjectWebWide.css"
 
 export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, urlPreview, children }) {
 	const [open, toggle] = useToggle(false)
-	OpenCloseResizing({ open, toggle })
+	// OpenCloseResizing({ open, toggle })
 
 	//Handle Hover
 	const [isHovered, setIsHovered] = useState(false)
@@ -31,10 +31,10 @@ export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, 
 						backgroundImage: `${urlPreview}`,
 					}}
 					onClick={toggle}
-					className='border-2 border-black bg-cover bg-center hidden sm:flex sm:relative -mt-8 sm:mt-0 rounded-xl sm:min-w-40 sm:w-40 sm:h-40 sm:aspect-square overflow-hidden sm:overflow-visible hover:cursor-pointer pointer-events-none sm:pointer-events-auto'
+					className='border-2 border-black bg-cover bg-center hidden sm:flex sm:relative -mt-8 sm:mt-0 rounded-xl sm:min-w-40 sm:w-40 sm:h-40 sm:aspect-square overflow-hidden sm:overflow-visible hover:cursor-pointer '
 				></div>
 				<div
-					className='relative flex flex-col w-full sm:pl-6 sm:pr-5 hover:cursor-pointer pointer-events-none sm:pointer-events-auto'
+					className='relative flex flex-col w-full sm:pl-6 sm:pr-5 hover:cursor-pointer'
 					onClick={toggle}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}
@@ -80,17 +80,17 @@ export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, 
 			<motion.div
 				animate={{ height: open ? "auto" : 0 }}
 				transition={{ type: "easeOut" }}
-				className='h-0 sm:mt-8'
+				className='h-0 sm:mt-8 overflow-hidden'
 			>
 				<div
-					className='flex border-y-3 border-black bg-center *:font-spartan'
+					className='flex border-y-3 border-black bg-center *:font-spartan px-3'
 					style={{
 						backgroundImage:
 							"repeating-linear-gradient(-45deg, #f8f8f8 0, #f8f8f8 3px, transparent 0, transparent 50%)",
 						backgroundSize: "28px 28px",
 					}}
 				>
-					<div className='flex flex-wrap justify-center gap-16 w-full m-auto [&_*]:font-spartan py-5'>
+					<div className='flex flex-wrap justify-center gap-x-16 gap-y-4 w-full m-auto [&_*]:font-spartan py-5'>
 						{/* Section Social Media */}
 						<section className='max-w-[42rem] w-full'>
 							<div ref={elementRef} className='flex flex-wrap items-center justify-between'>
@@ -124,7 +124,7 @@ export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, 
 						{/* Timer project */}
 						<SectionTimer />
 						{/* Define Project */}
-						<section className='relative flex flex-col min-h-full min-w-80 w-full max-w-[24rem] rounded-3xl py-6 bg-red-400 border-3 border-black overflow-hidden'>
+						<section className='relative flex flex-col min-h-full w-full max-w-[26rem] rounded-3xl py-6 bg-red-400 border-3 border-black overflow-hidden'>
 							<h3 className='text-3xl font-medium'>Define your project</h3>
 							<p className='text-xl text-center font-extralight leading-5'>
 								Play with interactive design
@@ -169,7 +169,7 @@ function SectionTimer() {
 	}, [])
 
 	return (
-		<section className='relative flex flex-col min-h-full min-w-80 w-full max-w-[26rem] bg-white border-3 border-black rounded-3xl py-6 overflow-hidden'>
+		<section className='relative flex flex-col min-h-full w-full max-w-[26rem] bg-white border-3 border-black rounded-3xl py-6 overflow-hidden'>
 			<h3 className='text-3xl font-medium max-w-72 m-auto'>Timer project</h3>
 			<p className='text-xl text-center font-extralight leading-5'>Online for</p>
 			<div className='flex w-full max-w-72 m-auto mt-5 gap-3'>
@@ -225,10 +225,10 @@ function SectionTimer() {
 			<p className='-mb-5 mt-8'>
 				*Original counter design: <span className='text-red-400'>@Sepidy</span>
 			</p>
-			<img src='/icons/star-black.svg' className='absolute top-80 rotate-[20deg] -left-[45px] w-[120px]' />
+			{/* <img src='/icons/star-black.svg' className='absolute top-80 rotate-[20deg] -left-[45px] w-[120px]' />
 			<img src='/icons/star-red.svg' className='absolute top-[300px] rotate-[20deg] -left-[40px] w-[120px]' />
 			<img src='/icons/heart-black.svg' className='absolute bottom-20 -rotate-[20deg] -right-[30px] w-[100px]' />
-			<img src='/icons/heart-orange.svg' className='absolute bottom-24 -rotate-[20deg] -right-[25px] w-[100px]' />
+			<img src='/icons/heart-orange.svg' className='absolute bottom-24 -rotate-[20deg] -right-[25px] w-[100px]' /> */}
 		</section>
 	)
 }
@@ -266,16 +266,22 @@ function GraphMain() {
 					On similar posts TikTok engages x4 more community compared to Instagram
 				</p>
 			</div>
-			<GraphColView name={"Penguins"} isTiktok={true} nbrView={"62.3K"} nbrLike={"1.2K"} height={"22"} />
-			<GraphColView name={"On hit"} isTiktok={true} nbrView={"15.6K"} nbrLike={"960"} height={"7.4"} />
-			<GraphColView name={"Penguins"} isTiktok={false} nbrView={"12.6K"} nbrLike={"850"} height={"7"}>
+			<GraphColView name={"Penguins"} isTiktok={true} nbrView={"62.3K"} nbrLike={"1.2K"} height={"h-[22rem]"} />
+			<GraphColView name={"On hit"} isTiktok={true} nbrView={"15.6K"} nbrLike={"960"} height={"h-[7.4rem]"} />
+			<GraphColView name={"Penguins"} isTiktok={false} nbrView={"12.6K"} nbrLike={"850"} height={"h-[7rem]"}>
 				<p className='w-full ml-[11px] mb-1 text-left font-extralight leading-4'>
 					Sole reel <br /> above 10K
 				</p>
 			</GraphColView>
-			<GraphColView name={"Bracelet"} isTiktok={true} nbrView={"11.5K"} nbrLike={"750"} height={"5.2"} />
+			<GraphColView name={"Bracelet"} isTiktok={true} nbrView={"11.5K"} nbrLike={"750"} height={"h-[5.2rem]"} />
 			{!isNarrow && (
-				<GraphColView name={"Dumbells"} isTiktok={true} nbrView={"11.3K"} nbrLike={"650"} height={"4.2"} />
+				<GraphColView
+					name={"Dumbells"}
+					isTiktok={true}
+					nbrView={"11.3K"}
+					nbrLike={"650"}
+					height={"h-[4.2rem]"}
+				/>
 			)}
 		</div>
 	)
@@ -286,7 +292,7 @@ function GraphColView({ name, isTiktok, nbrView, nbrLike, height, children }) {
 		<div className='max-w-28 min-w-[68px] flex flex-1 flex-col items-center '>
 			{children}
 			<div
-				className={`w-full p-1 mb-[6px] flex flex-col justify-between h-[${height}rem] ${
+				className={`w-full p-1 mb-[6px] flex flex-col justify-between ${height} ${
 					isTiktok ? "bg-[#78ffe7]" : "bg-[#ffb26b]"
 				}  rounded-xl border-3 border-black`}
 			>
@@ -397,36 +403,36 @@ const VerticalSlider = ({ onChange }) => {
 }
 
 //Global
-function OpenCloseResizing({ open, toggle }) {
-	const [isMobile, setIsMobile] = useState(false)
-	const [isDesktop, setIsDesktop] = useState(false)
+// function OpenCloseResizing({ open, toggle }) {
+// 	const [isMobile, setIsMobile] = useState(false)
+// 	const [isDesktop, setIsDesktop] = useState(false)
 
-	useEffect(() => {
-		const handleResize = () => {
-			setIsMobile(window.innerWidth <= 640)
-			setIsDesktop(window.innerWidth > 640)
-		}
+// 	useEffect(() => {
+// 		const handleResize = () => {
+// 			setIsMobile(window.innerWidth <= 640)
+// 			setIsDesktop(window.innerWidth > 640)
+// 		}
 
-		handleResize()
+// 		handleResize()
 
-		window.addEventListener("resize", handleResize)
+// 		window.addEventListener("resize", handleResize)
 
-		return () => {
-			window.removeEventListener("resize", handleResize)
-		}
-	}, [])
-	useEffect(() => {
-		if (isMobile && !open) {
-			toggle(true)
-		}
-	}, [isMobile])
+// 		return () => {
+// 			window.removeEventListener("resize", handleResize)
+// 		}
+// 	}, [])
+// 	useEffect(() => {
+// 		if (isMobile && !open) {
+// 			toggle(true)
+// 		}
+// 	}, [isMobile])
 
-	useEffect(() => {
-		if (isDesktop && open) {
-			toggle(false)
-		}
-	}, [isDesktop])
-}
+// 	useEffect(() => {
+// 		if (isDesktop && open) {
+// 			toggle(false)
+// 		}
+// 	}, [isDesktop])
+// }
 
 function useToggle(initialValue) {
 	const [value, setValue] = useState(initialValue)
