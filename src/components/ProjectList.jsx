@@ -114,9 +114,9 @@ export function ProjectList() {
 				color2={"#000000"}
 				urlPreview={'url("/projets/neo/icon_neo.webp")'}
 			>
-				<p className='text-left mb-3'>
-					Découverte du Néobrutalism, courant de design mineur mais ayant ses spécificités propres plutot
-					intéressantes
+				<p className='text-left mb-3 w-full'>
+					Découverte du Néobrutalism, courant de design mineur ayant ses spécificités propres, coloré, flat
+					design, contours...
 				</p>
 			</ProjectWebWide>
 			{/* Riva */}
@@ -237,7 +237,31 @@ export function ProjectList() {
 			>
 				<p className='text-left mb-3'>
 					Modélisation du Wally Esence 143 pour présentation client, besoin de rendus réalistes, animations de
-					caméra, texture procedurales, rendus 4K
+					caméra, texture procedurales, rendus 4K...
+				</p>
+			</ProjectBase>
+			{/* Projets Divers */}
+			<ProjectBase
+				baseState={false}
+				title={"Projets 3D Divers"}
+				pills={["Modélisation 3D", "Animation 3D"]}
+				color1={"#0215b5"}
+				color2={"#0215b5"}
+				urls={[
+					"/projets/divers/01.webp",
+					"/projets/divers/02.webp",
+					"/projets/divers/03.webp",
+					"/projets/divers/05.webp",
+					"/projets/divers/06.webp",
+					"/projets/divers/11.webp",
+					"/projets/divers/07.webp",
+					"/projets/divers/04.webp",
+				]}
+				urlPreview={'url("/projets/divers/00.webp")'}
+			>
+				<p className='text-left mb-3'>
+					Des projets professionnels mais aussi personnels, j'ai mis dans cette section différents rendus 3D
+					pour que vous ayez un aperçu d'autres projets.
 				</p>
 			</ProjectBase>
 		</section>
