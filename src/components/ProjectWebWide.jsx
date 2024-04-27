@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { NavLink } from "react-router-dom"
 import "./ProjectWebWide.css"
 
-export function ProjectWebWide({ baseState, title, pills, color1, color2, urls, urlPreview, children }) {
+export function ProjectWebWide({ title, pills, color1, color2, urls, urlPreview, children }) {
 	const [open, toggle] = useToggle(false)
 	// OpenCloseResizing({ open, toggle })
 

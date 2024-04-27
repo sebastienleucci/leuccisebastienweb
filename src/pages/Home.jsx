@@ -1,6 +1,5 @@
 import { ProjectList } from "../components/ProjectList.jsx"
 import { Link } from "react-router-dom"
-import { ProjectWebWide } from "../components/ProjectWebWide.jsx"
 
 export function Home() {
 	return (
