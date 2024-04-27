@@ -28,7 +28,6 @@ export function Home() {
 				</div>
 				<div className='absolute z-20 bg-gradient-to-b from-[#ffffff00] via-[#ffffff98]  to-[#ffffffff] w-full h-96 bottom-0'></div>
 			</section>
-        
 			<ProjectList />
 		</>
 	)

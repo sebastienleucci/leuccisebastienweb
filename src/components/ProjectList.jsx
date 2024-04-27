@@ -6,7 +6,6 @@ export function ProjectList() {
 		<section className='w-full -mt-16'>
 			{/* Lunettes Ghyara */}
 			<ProjectBase
-				baseState={false}
 				title={"Collection de lunettes - Ghyara"}
 				pills={["Design de produit", "Modélisation 3D"]}
 				color1={"#bf854b"}
@@ -54,7 +53,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* MYC */}
 			<ProjectBase
-				baseState={false}
 				title={"Monaco Yacht Club - 70 ans"}
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#be2822"}
@@ -75,7 +73,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* Nepal */}
 			<ProjectBase
-				baseState={false}
 				title={"Documentaire : Le Dernier Dauphin"}
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#089384"}
@@ -107,7 +104,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* Web Neobrutalism */}
 			<ProjectWebWide
-				baseState={false}
 				title={"Design Study: Neobrutalism"}
 				pills={["Design UI", "React", "Tailwind"]}
 				color1={"#000000"}
@@ -121,7 +117,6 @@ export function ProjectList() {
 			</ProjectWebWide>
 			{/* Riva */}
 			<ProjectBase
-				baseState={false}
 				title={"Yacht Riva"}
 				pills={["Modélisation 3D"]}
 				color1={"#da5432"}
@@ -148,7 +143,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* Homnes */}
 			<ProjectBase
-				baseState={false}
 				title={"Maison-Atelier Homnès"}
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#989986"}
@@ -168,7 +162,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* Rocks */}
 			<ProjectBase
-				baseState={false}
 				title={"Piscine Rocks"}
 				pills={["Modélisation 3D"]}
 				color1={"#2f4ea4"}
@@ -188,7 +181,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* Celeste */}
 			<ProjectBase
-				baseState={false}
 				title={"Guitare Céleste MCI"}
 				pills={["Modélisation 3D"]}
 				color1={"#9f4525"}
@@ -218,7 +210,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* Wally */}
 			<ProjectBase
-				baseState={false}
 				title={"Yacht Wally Esense 143"}
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#1360a7"}
@@ -242,7 +233,6 @@ export function ProjectList() {
 			</ProjectBase>
 			{/* Projets Divers */}
 			<ProjectBase
-				baseState={false}
 				title={"Projets 3D Divers"}
 				pills={["Modélisation 3D", "Animation 3D"]}
 				color1={"#0215b5"}

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Slider from "react-slick"
 
-export function ProjectBase({ baseState, title, pills, color1, color2, urls, urlPreview, children }) {
+export function ProjectBase({ title, pills, color1, color2, urls, urlPreview, children }) {
 	const [open, toggle] = useToggle(false)
 	OpenCloseResizing({ open, toggle })
 
@@ -70,35 +70,21 @@ export function ProjectBase({ baseState, title, pills, color1, color2, urls, url
 					</svg>
 				</button>
 			</div>
-			{baseState ? (
-				<motion.div className='h-auto sm:mt-6 '>
-					<div className='slider-container rounded-xl overflow-hidden hover:cursor-pointer pointer-events-none sm:pointer-events-auto'>
-						<SimpleSlider>
-							{urls.map((url, index) => (
-								<div key={index} className={"flex justify-center items-center overflow-hidden -mb-2"}>
-									<img src={url} />
-								</div>
-							))}
-						</SimpleSlider>
-					</div>
-				</motion.div>
-			) : (
-				<motion.div
-					animate={{ height: open ? "auto" : 0 }}
-					transition={{ type: "easeOut" }}
-					className='h-0 sm:mt-6  '
-				>
-					<div className='slider-container  rounded-xl overflow-hidden hover:cursor-pointer '>
-						<SimpleSlider>
-							{urls.map((url, index) => (
-								<div key={index} className={"flex justify-center items-center overflow-hidden -mb-2"}>
-									<img src={url} loading='lazy' />
-								</div>
-							))}
-						</SimpleSlider>
-					</div>
-				</motion.div>
-			)}
+			<motion.div
+				animate={{ height: open ? "auto" : 0 }}
+				transition={{ type: "easeOut" }}
+				className='h-0 sm:mt-6  '
+			>
+				<div className='slider-container  rounded-xl overflow-hidden hover:cursor-pointer '>
+					<SimpleSlider>
+						{urls.map((url, index) => (
+							<div key={index} className={"flex justify-center items-center overflow-hidden -mb-2"}>
+								<img src={url} loading='lazy' />
+							</div>
+						))}
+					</SimpleSlider>
+				</div>
+			</motion.div>
 		</section>
 	)
 }
