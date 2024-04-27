@@ -260,8 +260,8 @@ export function ProjectList() {
 				urlPreview={'url("/projets/divers/00.webp")'}
 			>
 				<p className='text-left mb-3'>
-					Des projets professionnels mais aussi personnels, j'ai mis dans cette section différents rendus 3D
-					pour que vous ayez un aperçu d'autres projets.
+					Des projets professionnels mais aussi personnels, dans cette section vous trouverez différents
+					rendus 3D et vous aurez un aperçu d'autres projets et possibilités.
 				</p>
 			</ProjectBase>
 		</section>
