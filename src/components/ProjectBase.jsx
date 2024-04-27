@@ -79,7 +79,7 @@ export function ProjectBase({ title, pills, color1, color2, urls, urlPreview, ch
 					<SimpleSlider>
 						{urls.map((url, index) => (
 							<div key={index} className={"flex justify-center items-center overflow-hidden -mb-2"}>
-								<img src={url} loading='lazy' />
+								<img src={url} loading='lazy' fetchPriority='low' />
 							</div>
 						))}
 					</SimpleSlider>
