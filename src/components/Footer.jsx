@@ -12,15 +12,19 @@ export function Footer() {
 				</Link>
 			</nav>
 			<nav className='m-auto flex justify-center gap-8 px-5'>
-				<Link to='/' className='font-bold'>
+				<Link to='https://www.instagram.com/sebastienleucci/' target='_blank' className='font-bold'>
 					<img src='/icons/brand-instagram.svg' className='w-10' />
 				</Link>
-				<Link to='/' className='font-bold'>
+				<Link
+					to='https://www.linkedin.com/in/s%C3%A9bastien-leucci-526789112/'
+					target='_blank'
+					className='font-bold'
+				>
 					<img src='/icons/brand-linkedin.svg' className='w-10' />
 				</Link>
-				<Link to='/' className='font-bold'>
+				{/* <Link to='/' className='font-bold'>
 					<img src='/icons/brand-behance.svg' className='w-10' />
-				</Link>
+				</Link> */}
 			</nav>
 			<p className='py-4'>Créé par Sébastien Leucci - Copyright 2024 - Tous droits réservés</p>
 		</footer>
